@@ -18,18 +18,20 @@ const StarshipList = () => {
       <h3>Starship List</h3>
       {starshipList.length ? 
       <>
+        <div class="card-container">
         {starshipList.map(starship => 
-          <div key = {starship.name}>
+          <div key = {starship.name} class="card">
             <Link to = '/starship' state={{starship}}>{starship.name}</Link>
-            <br/>
           </div>
         )}
+        </div>
       </> 
       : 
       <>
         <h4>Loading starships...</h4>
       </>}
     </>
+    
   )
 }
 
