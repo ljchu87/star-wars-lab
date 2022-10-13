@@ -19,8 +19,9 @@ const StarshipList = () => {
       {starshipList.length ? 
       <>
         {starshipList.map(starship => 
-          <div>
-            {starship.name}
+          <div key = {starship.name}>
+            <Link to = '/starship' state={{starship}}>{starship.name}</Link>
+            <br/>
           </div>
         )}
       </> 
